@@ -6,7 +6,7 @@ canvas{
 
 :root {
   --mainColor: rgba(228, 228, 228, 0.85);
-  --secondaryColor: #272727;
+  --secondaryColor:rgba(255, 255, 255, 0.8);
   --lightBgColor: rgba(184, 184, 184, 0.473);
   
   --mainText:black;
@@ -55,6 +55,10 @@ p,li,span,label,input,textarena {
 a{
   text-decoration:none;
   color:var(--mainColor)
+}
+
+ul{
+  padding-left: 20px;
 }
 
 h1 { font-size: 56px;}
@@ -145,7 +149,7 @@ margin-bottom: 40px;
 
 }
 
-.project-container{
+.tile-container{
   grid-column: 2 / span 10;
 
   font-size: 1.1rem;
@@ -158,18 +162,16 @@ margin-bottom: 40px;
   justify-content: left;
 }
 
-.project-tile{
+.tile{
   border: var(--borderSize) solid var(--borderColor);
 }
 
 .project-pic{
   display:block;
   width: 100%;
-  height: 200px;
-  object-fit: cover;
+  height: 400px;
 }
 .project-body{
-  background: var(--mainColor);
 padding:20px;
 }
 .project-title{
@@ -197,7 +199,7 @@ padding:20px;
   text-align: center;
 }
 
-.project-container2{
+.project-container{
   grid-column: 2 / span 10;
 
   font-size: 1.1rem;
@@ -210,7 +212,7 @@ padding:20px;
   justify-content: left;
 }
 
-.project-tile2{
+.project-tile{
   background: var(--borderColor);
   border: var(--borderSize) solid var(--borderColor);
   display:grid;
@@ -219,22 +221,21 @@ padding:20px;
 
 }
 .project-leftside{
-
 }
 .project-rightside{
-  background: var(--mainColor);
+  background: var(--secondaryColor);
   padding:20px;  
 }
 
 .project-pic{
   display:block;
   width: 100%;
-  height: 200px;
+  height: 250px;
   object-fit: cover;
 }
 .project-body{
   border-top: var(--borderSize) solid var(--borderColor);
-  background: var(--mainColor);
+  background: var(--secondaryColor);
 padding:20px;
 }
 .project-title{
@@ -242,7 +243,10 @@ padding:20px;
   margin:0;
 }
 .project-desc{
-  color:var(--secondaryColor)
+  color:var(--secondaryText);
+}
+.project-details{
+  font-size: 0.95rem;
 }
 .buttons-container{
   display:grid;

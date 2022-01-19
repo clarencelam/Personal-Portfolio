@@ -76,14 +76,14 @@
     <h3>⌨️ SOME SOFTWARE I'VE BUILT:</h3>
   </section>
 
-  <section class="project-container2">
+  <section class="project-container">
 
-    <div class="project-tile2">
+    <div class="project-tile">
       <div class="project-leftside">
         <img class="project-pic" src="clamgame.JPG">
         <div class="project-body">
           <h4 class="project-title">Clam Game</h4>
-          <p class="project-desc">A web game based on running a food stand on Maple Island. A fun project with the purpose of learning to code in vanilla Javascript.</p>
+          <p class="project-desc">A web game based on running a food stand on Maple Island. A fun project with the purpose of learning to code in vanilla Javascript. Built from scratch.</p>
             <div class="buttons-container">
               <a href="#"  class="project-livedemo">LIVE DEMO</a>
                 <a href="#" class="project-sourcecode">SOURCE CODE</a>
@@ -93,20 +93,56 @@
       </div>
       <div class="project-rightside">
         <h6 class="project-title">Tech Stack</h6>
-        <p class="project-desc">Javascript ⎯ HTML ⎯ CSS</p>
+        <ul class="project-details">
+          <li>Built with Javascript, HTML, and CSS</li>
+          <li>Version control and deployment with Git</li>
+        </ul>
         <h6 class="project-title">Technical Achievments</h6>
-        <ul>
+        <ul class="project-details">
           <li>
-            Created gameloop with a stabilized frame rate of 100fps on all computers/browsers. 
-          </li>
+            Created gameloop with a stabilized frame rate of 100fps on all computers/browsers. Did this by implementing a gameloop which ingests the current timestamp, and checks the difference between the last timestamp. If the change in time is >= 10 milliseconds, the next frame is updated. As a new frame is loaded 100 times a second, the game framerate is cemented at 100 frames per second regardless of the user's browser speed.
+          </li><br>
+          <li>Implemented a simple gamestate design pattern to manage the different phases of the game. At any given time, one gamestate is active (like a Pause gamestate, Menu gamestate, etc.), and going to other gamestates changes elements like the background image, active functions, etc.</li>
         </ul>
       </div>
     </div>
 
+    <div class="project-tile">
+      <div class="project-leftside">
+        <img class="project-pic" src="learninglog.JPG">
+        <div class="project-body">
+          <h4 class="project-title">Learning Log</h4>
+          <p class="project-desc">A web based learning journal / note taking application. Project is derived from Python Crash Course</p>
+            <div class="buttons-container">
+              <a href="https://clarences-learninglog.herokuapp.com/"  class="project-livedemo">LIVE DEMO</a>
+                <a href="https://github.com/clarencelam/clam_learning_log" class="project-sourcecode">SOURCE CODE</a>
+            </div>
+        </div>
+  
+      </div>
+      <div class="project-rightside">
+        <h6 class="project-title">Tech Stack</h6>
+        <ul class="project-details">
+          <li>Built with Python and the Django framework.</li>
+          <li>Database created with SQLite</li>
+          <li>Styled with Bootstrap4</li>
+          <li>Version control with Git</li>
+          <li>Deployment with Heroku</li>
+        </ul>
+        <h6 class="project-title">Technical Achievments</h6>
+        <ul class="project-details">
+          <li>
+            Implemented user registration and authentication with Django, and tied each user's content to their respective user account.
+          </li><br>
+        </ul>
+      </div>
+    </div>
+
+
   </section>
 
-  <section class="project-container">
-    <div class="project-tile">
+  <section class="tile-container">
+    <div class="tile">
       <img class="project-pic" src="clamgame.JPG">
       <div class="project-body">
         <h6 class="project-title">Learning Log</h6>
@@ -117,7 +153,7 @@
           </div>
       </div>
     </div>
-    <div class="project-tile">
+    <div class="tile">
       <img class="project-pic" src="clamgame.JPG">
       <div class="project-body">
         <h6 class="project-title">Web Blog</h6>
@@ -128,18 +164,18 @@
           </div>
       </div>
     </div>
-    <div class="project-tile">
+    <div class="tile">
       <img class="project-pic" src="clamgame.JPG">
       <div class="project-body">
         <h6 class="project-title">Clam Game</h6>
         <p class="project-desc">A web app for note taking. Built with Django and Boostrap. Hosted with Heroku.</p>
           <div class="buttons-container">
-            <a href="#"  class="project-livedemo">LIVE DEMO</a>
+            <a href="https://clarences-learninglog.herokuapp.com/"  class="project-livedemo">LIVE DEMO</a>
               <a href="#" class="project-sourcecode">SOURCE CODE</a>
           </div>
       </div>
     </div>
-    <div class="project-tile">
+    <div class="tile">
       <img class="project-pic" src="clamgame.JPG">
       <div class="project-body">
         <h6 class="project-title">Personal Website</h6>
