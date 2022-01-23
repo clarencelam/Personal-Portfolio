@@ -154,22 +154,27 @@ text-shadow: 2px 2px 0px #ffffff;
 }
 
 .column-container{
-  grid-column: 2 / span 10;
-
-  font-size: 1.1rem;
-  line-height: 1.5;
-  margin-bottom: var(--bottomSpacing);
-
+  border: 0px solid white;
   display:grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap:20px;
+  grid-template: "1fr 1fr 1fr" auto;
+  grid-template-rows: 60px 200px;
+  gap:0px;
+  margin-bottom: 0px;
+  
 }
 
 .column{
-  background: var(--mainColor);
-  border: var(--borderSize) solid var(--borderColor);
-  padding: 1rem;
+  border: 0px solid white;
+  padding: 0rem;
+  margin: 0px;
+  text-align: right;
+}
 
+.longcolumn{
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;
 }
 
 .tile-container{
@@ -325,19 +330,29 @@ blockquoteright {
   text-align: right;
 }
 
-blockquote h6, blockquoteright h6{
+blockquote h6, blockquoteright h6, blockquoterightsmall h6{
   color: var(--lightText);
   font-size: 2.2rem;
   line-height: 1;
   text-shadow: 3px 3px 0 var(--blockquoteOutlineColor), 3px -3px 0 var(--blockquoteOutlineColor), -3px 3px 0 var(--blockquoteOutlineColor), -3px -3px 0 var(--blockquoteOutlineColor), 3px 0px 0 var(--blockquoteOutlineColor), 0px 4px 0 var(--blockquoteOutlineColor), -3px 0px 0 var(--blockquoteOutlineColor), 0px -3px 0 var(--blockquoteOutlineColor);
 }
 
-blockquote p, blockquoteright p{
+blockquote p, blockquoteright p, blockquoterightsmall p{
   color: var(--lightText);
   font-size: 1.5rem;
   line-height: 1;
   text-shadow: 3px 3px 0 var(--blockquoteOutlineColor), 3px -3px 0 var(--blockquoteOutlineColor), -3px 3px 0 var(--blockquoteOutlineColor), -3px -3px 0 var(--blockquoteOutlineColor), 3px 0px 0 var(--blockquoteOutlineColor), 0px 4px 0 var(--blockquoteOutlineColor), -3px 0px 0 var(--blockquoteOutlineColor), 0px -3px 0 var(--blockquoteOutlineColor);
 }
+
+blockquoterightsmall {
+  margin: 0;
+  padding: 0;
+  
+  grid-column: 9 / span 3;
+  margin-bottom: var(--bottomSpacing);
+  text-align: right;
+}
+
 
 
 /*

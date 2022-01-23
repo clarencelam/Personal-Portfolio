@@ -36,20 +36,32 @@
 
 
   <blockquote>
-    <h6>Scroll on to learn more about me & the stuff I've coded so far. 👨‍💻</h6>
+    <h6>Scroll on to learn more about me & the stuff I've coded. 👨‍💻</h6>
   </blockquote>
 
-  <blockquoteright>
-    <h6 onclick="pageScroll()"> (Or click here if you're lazy.)     <p>refresh page to stop auto-scroll</p>
-    </h6>
+  <blockquoterightsmall>
+    <div class="column-container">
+      <div class="column"><h6 onclick="pageScroll()">🔽</h6></div>
+      <div class="column"><h6 onclick="doubleScroll()">⏬</h6></div>
+      <div class="column"><h6 onclick="stopScroll()">🛑</h6></div> 
+      <div class="longcolumn"><h6>Or use these buttons if you're lazy</h6></div>
+
+    </div>
+
     <script>
       function pageScroll() {
           window.scrollBy(0,1);
           scrolldelay = setTimeout(pageScroll,20);  
       }
+      function doubleScroll() {
+          window.scrollBy(0,1);
+          scrolldelay = setTimeout(pageScroll,10);  
+      }
+      function stopScroll(){
+        clearTimeout(scrolldelay)
+      }
       </script>
-      
-  </blockquoteright>
+  </blockquoterightsmall>
 
 
   <section class="subheader">
