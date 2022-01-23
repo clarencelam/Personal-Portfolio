@@ -41,20 +41,32 @@
 
   <blockquoterightsmall>
     <div class="column-container">
-      <div class="column"><h6 onclick="pageScroll()">🔽</h6></div>
+      <div class="column"><h6 onclick="startScroll()">🔽</h6></div>
       <div class="column"><h6 onclick="doubleScroll()">⏬</h6></div>
       <div class="column"><h6 onclick="stopScroll()">🛑</h6></div> 
-      <div class="longcolumn"><h6>Or use these buttons if you're lazy</h6></div>
+      <div class="longcolumn"><h6>Or use these buttons if you're lazy <br>(refresh to stop auto-scroll)</h6></div>
 
 
     <script>
       function pageScroll() {
           window.scrollBy(0,1);
-          scrolldelay = setTimeout(pageScroll,20);  
+          scrolldelay = setTimeout(pageScroll,20)
+      }
+      function doublePageScroll() {
+          window.scrollBy(0,1);
+          scrolldelay = setTimeout(doublePageScroll,5)
+      }
+      function startScroll(){
+        if(typeof scrolldelay !== 'undefined'){
+          clearTimeout(scrolldelay);
+        }
+        pageScroll();
       }
       function doubleScroll() {
-          window.scrollBy(0,1);
-          scrolldelay = setTimeout(pageScroll,10);  
+        if(typeof scrolldelay !== 'undefined'){
+          clearTimeout(scrolldelay);
+        }
+        doublePageScroll();
       }
       function stopScroll(){
         clearTimeout(scrolldelay)
