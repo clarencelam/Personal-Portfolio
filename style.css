@@ -157,7 +157,7 @@ text-shadow: 2px 2px 0px #ffffff;
   border: 0px solid white;
   display:grid;
   grid-template: "1fr 1fr 1fr" auto;
-  grid-template-rows: 60px 200px;
+  grid-template-rows: none;
   gap:0px;
   margin-bottom: 0px;
   
