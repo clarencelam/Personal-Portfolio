@@ -54,7 +54,7 @@ function addStar(){
   scene.add(star);
 }
 
-let numstars = 200;
+let numstars = 100;
 
 Array(numstars).fill().forEach(addStar);
 

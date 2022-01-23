@@ -7,7 +7,9 @@ canvas{
 :root {
   --mainColor: rgba(228, 228, 228, 0.85);
   --secondaryColor:rgba(255, 255, 255, 0.8);
-  --lightBgColor: rgba(184, 184, 184, 0.473);
+  --darkBgColor: rgba(34, 34, 34, 0.795);
+  --transColor: rgba(255, 255, 255, 0);
+  --blockquoteOutlineColor: #3b3b3b;
   
   --mainText:black;
   --secondaryText:rgb(39, 39, 39);
@@ -17,11 +19,25 @@ canvas{
   --borderSize: 10px;
   --borderColor:#272727;
 
-  --bottomSpacing: 200px;
+  --bottomSpacing: 100px;
+
+  --shadowColor: darkslategray;
 
   font-family: new-order, sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+
+body::-webkit-scrollbar {
+width: 0.8rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--darkBgColor)
+}
+
+body::-webkit-scrollbar-thumb {
+  background: darkslategray;
 }
 
 main {
@@ -39,10 +55,12 @@ main {
 }
 
 
+
 h1, h2, h3, h4, h5, h6, strong, blockquote {
   font-family: 'Be Vietnam Pro', sans-serif;
   font-weight: 700;
   font-style: normal;
+  
 }
 
 p,li,span,label,input,textarena {
@@ -52,9 +70,13 @@ p,li,span,label,input,textarena {
   font-style: normal;
 }
 
+li{
+  color:white;
+}
+
 a{
   text-decoration:none;
-  color:var(--mainColor)
+  color: #31528f
 }
 
 ul{
@@ -75,7 +97,7 @@ h6 { font-size: 16px;}
   font-size: 1.5rem;
   padding: 2rem;
   margin-bottom: var(--bottomSpacing);
-  border: var(--borderSize) solid var(--borderColor);
+  border: var(--borderSize) solid var(--transColor);
   
   box-shadow: 11px 11px 0px 3px rgba(6,54,6,1);
   -webkit-box-shadow: 11px 11px 0px 3px rgba(6,54,6,1);
@@ -85,13 +107,14 @@ h6 { font-size: 16px;}
 .subheader {
 grid-column: 2 / span 6;
 background: var(--mainColor);
-margin-bottom: 40px;
+margin-bottom: 100px;
+font-size: rem;
+color: var(--mainText);
+text-shadow: 2px 2px 0px #ffffff;
 
 
 
-  font-size: 1rem;
-  padding: 1rem;
-  border: var(--borderSize) solid var(--borderColor);
+  border: var(--borderSize) solid var(--transColor);
   
   box-shadow: 11px 11px 0px 3px rgba(6,54,6,1);
   -webkit-box-shadow: 11px 11px 0px 3px rgba(6,54,6,1);
@@ -166,43 +189,11 @@ margin-bottom: 40px;
   border: var(--borderSize) solid var(--borderColor);
 }
 
-.project-pic{
-  display:block;
-  width: 100%;
-  height: 400px;
-}
-.project-body{
-padding:20px;
-}
-.project-title{
-  color:black;
-  margin:0;
-}
-.project-desc{
-  color:var(--secondaryColor)
-}
-.buttons-container{
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  gap:10px;
-  text-align: center;
-  font-size: 0.8rem;
-}
-.project-livedemo{
-  background-color: var(--borderColor);
-  border: 2px solid var(--borderColor);
-  text-align: center;
-}
-.project-sourcecode{
-  background-color: var(--borderColor);
-  border: 2px solid var(--borderColor);
-  text-align: center;
-}
+
 
 .project-container{
   grid-column: 2 / span 10;
 
-  font-size: 1.1rem;
   line-height: 1.5;
   margin-bottom: var(--bottomSpacing);
 
@@ -213,18 +204,22 @@ padding:20px;
 }
 
 .project-tile{
-  background: var(--borderColor);
-  border: var(--borderSize) solid var(--borderColor);
+  background: var(--transColor);
+  border: var(--borderSize) solid var(--transColor);
   display:grid;
   grid-template-columns:  1fr 1fr;
   grid-gap: var(--borderSize);
+  margin-bottom: 80px;
 
 }
 .project-leftside{
+    background: var(--darkBgColor);
+
 }
 .project-rightside{
-  background: var(--secondaryColor);
+  background: var(--transColor);
   padding:20px;  
+  margin: auto;
 }
 
 .project-pic{
@@ -234,25 +229,32 @@ padding:20px;
   object-fit: cover;
 }
 .project-body{
-  border-top: var(--borderSize) solid var(--borderColor);
-  background: var(--secondaryColor);
 padding:20px;
+  background: var(--transColor);
+  font-size: 1.2rem;
+
 }
 .project-title{
-  color:black;
   margin:0;
+  font-size: 2rem;
+  color: white;
+  text-shadow: 4px 3px 0px #7A7A7A;
+
 }
 .project-desc{
-  color:var(--secondaryText);
+  color:var(--lightText);
+  text-shadow: 2px 2px 0 black, 2px -2px 0 black, -2px 2px 0 black, -2px -2px 0 black, 2px 0px 0 black, 0px 2px 0 black, -2px 0px 0 black, 0px -2px 0 black;
+
 }
 .project-details{
   font-size: 0.95rem;
+  text-shadow: 2px 2px 0 black, 2px -2px 0 black, -2px 2px 0 black, -2px -2px 0 black, 2px 0px 0 black, 0px 2px 0 black, -2px 0px 0 black, 0px -2px 0 black;
 }
 .buttons-container{
   display:grid;
   grid-template-columns: 1fr 1fr;
   gap:10px;
-  text-align: center;
+  text-align:center;
   font-size: 0.8rem;
 }
 .project-livedemo{
@@ -272,7 +274,8 @@ padding:20px;
   grid-column: 2 / span 10;
   padding: 10px;
 
-  background-color: #272727;
+  color: white;
+  background-color: var(--transColor);
 
   
   margin-bottom: var(--bottomSpacing);
@@ -285,7 +288,7 @@ padding:20px;
 }
 
 .timeline-yr{
-  background: var(--mainColor);
+  background: var(--darkBgColor);
 
   display: flex;
   align-items: center;
@@ -293,10 +296,11 @@ padding:20px;
 }
 
 .timeline-content{
-  background: var(--mainColor);
+  background: var(--darkBgColor);
   display: flex;
   align-items: start;
   justify-content: left;
+  color:white;
 }
 
 
@@ -306,17 +310,34 @@ blockquote {
   margin: 0;
   padding: 0;
   grid-column: 2 / span 9;
-  margin-bottom: var(--spacing);
-}
-
-blockquote p {
-  color: black;
-  background-color: white;
-  font-size: 4rem;
-  display: inline;
+  margin-bottom: var(--bottomSpacing);
   line-height: 1;
+  text-align: left;
+
 }
 
+blockquoteright {
+  margin: 0;
+  padding: 0;
+  grid-column: 3 / span 9;
+  margin-bottom: var(--bottomSpacing);
+  line-height: 1;
+  text-align: right;
+}
+
+blockquote h6, blockquoteright h6{
+  color: var(--lightText);
+  font-size: 2.2rem;
+  line-height: 1;
+  text-shadow: 3px 3px 0 var(--blockquoteOutlineColor), 3px -3px 0 var(--blockquoteOutlineColor), -3px 3px 0 var(--blockquoteOutlineColor), -3px -3px 0 var(--blockquoteOutlineColor), 3px 0px 0 var(--blockquoteOutlineColor), 0px 4px 0 var(--blockquoteOutlineColor), -3px 0px 0 var(--blockquoteOutlineColor), 0px -3px 0 var(--blockquoteOutlineColor);
+}
+
+blockquote p, blockquoteright p{
+  color: var(--lightText);
+  font-size: 1.5rem;
+  line-height: 1;
+  text-shadow: 3px 3px 0 var(--blockquoteOutlineColor), 3px -3px 0 var(--blockquoteOutlineColor), -3px 3px 0 var(--blockquoteOutlineColor), -3px -3px 0 var(--blockquoteOutlineColor), 3px 0px 0 var(--blockquoteOutlineColor), 0px 4px 0 var(--blockquoteOutlineColor), -3px 0px 0 var(--blockquoteOutlineColor), 0px -3px 0 var(--blockquoteOutlineColor);
+}
 
 
 /*
