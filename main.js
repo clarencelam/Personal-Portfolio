@@ -78,6 +78,38 @@ function moveCamera(){
 document.body.onscroll = moveCamera;
 moveCamera()
 
+// Auto Scroll
+
+/*
+let autoscroll = false;
+
+function toggleScroll(){
+  if(autoscroll === false){
+    autoscroll = true;
+  } else{
+    autoscroll = false;
+  }
+}
+
+function pageScroll() {
+  if(autoscroll === true){
+    window.scrollBy(0,1);
+    scrolldelay = setTimeout(pageScroll,10);  
+  } else{
+    //
+  }
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  var btn = document.getElementById('startscroll');
+  if (btn) {
+    btn.addEventListener('click', toggleScroll());
+  }
+});
+
+pageScroll()
+*/
+
 function animate(){
   requestAnimationFrame(animate);
 

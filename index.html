@@ -11,11 +11,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" type="text/css" href="style.css">
+
   </head>
   <body>
     <canvas id="bg"></canvas>
 
 <main>
+  <script src="src=/main.js"></script>
+
 <!--
   <section class="s1">
     <h1>CLARENCE LAM</h1>
@@ -36,13 +39,26 @@
     <h6>Scroll on to learn more about me & the stuff I've coded so far. 👨‍💻</h6>
   </blockquote>
 
+  <blockquoteright>
+    <h6 onclick="pageScroll()"> (Or click here if you're lazy.)     <p>refresh page to stop auto-scroll</p>
+    </h6>
+    <script>
+      function pageScroll() {
+          window.scrollBy(0,1);
+          scrolldelay = setTimeout(pageScroll,20);  
+      }
+      </script>
+      
+  </blockquoteright>
+
 
   <section class="subheader">
     <h3>⌨️ SOME SOFTWARE I'VE BUILT:</h3>
   </section>
 
   <blockquote>
-    <p>These projects are a mixed bag-- some are projects derived from books, while others are 100% custom code</p>
+    <p>🚧 UNDER CONSTRUCTION 🚧 <br>
+      These projects are a mixed bag-- some are projects derived from books, while others are 100% custom code</p>
   </blockquote>
 
   <section class="project-container">

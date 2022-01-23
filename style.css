@@ -99,9 +99,9 @@ h6 { font-size: 16px;}
   margin-bottom: var(--bottomSpacing);
   border: var(--borderSize) solid var(--transColor);
   
-  box-shadow: 11px 11px 0px 3px rgba(6,54,6,1);
-  -webkit-box-shadow: 11px 11px 0px 3px rgba(6,54,6,1);
-  -moz-box-shadow: 11px 11px 0px 3px rgba(6,54,6,1);
+  box-shadow: 5px 5px 0px 2px rgba(6,54,6,1);
+  -webkit-box-shadow: 5px 5px 0px 2px rgba(6,54,6,1);
+  -moz-box-shadow: 5px 5px 0px 2px rgba(6,54,6,1);
 }
 
 .subheader {
@@ -114,11 +114,11 @@ text-shadow: 2px 2px 0px #ffffff;
 
 
 
-  border: var(--borderSize) solid var(--transColor);
+  border: var(--borderSize) solid var(--borderColor);
   
-  box-shadow: 11px 11px 0px 3px rgba(6,54,6,1);
-  -webkit-box-shadow: 11px 11px 0px 3px rgba(6,54,6,1);
-  -moz-box-shadow: 11px 11px 0px 3px rgba(6,54,6,1);
+  box-shadow: 6px 6px 0px 3px var(--shadowColor);
+  -webkit-box-shadow: 6px 6px 0px 3px var(--shadowColor);
+  -moz-box-shadow: 6px 6px 0px 3px var(--shadowColor);
 }
 
 
