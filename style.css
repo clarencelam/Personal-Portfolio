@@ -107,14 +107,14 @@ h6 { font-size: 16px;}
 .subheader {
 grid-column: 2 / span 6;
 background: var(--mainColor);
-margin-bottom: 100px;
+margin-bottom: 100px; 
 font-size: rem;
 color: var(--mainText);
 text-shadow: 2px 2px 0px #ffffff;
 
 
 
-  border: var(--borderSize) solid var(--borderColor);
+  border: var(--borderSize) solid var(--transColor);
   
   box-shadow: 6px 6px 0px 3px var(--shadowColor);
   -webkit-box-shadow: 6px 6px 0px 3px var(--shadowColor);
@@ -243,7 +243,8 @@ padding:20px;
   margin:0;
   font-size: 2rem;
   color: white;
-  text-shadow: 4px 3px 0px #7A7A7A;
+  text-shadow: 6px 6px 0px black, 2px 2px 0 black, 2px -2px 0 black, -2px 2px 0 black, -2px -2px 0 black, 2px 0px 0 black, 0px 2px 0 black, -2px 0px 0 black, 0px -2px 0 black;
+
 
 }
 .project-desc{
