@@ -76,7 +76,7 @@ li{
 
 a{
   text-decoration:none;
-  color: #31528f
+  color: rgb(129, 230, 255);
 }
 
 ul{
@@ -278,14 +278,11 @@ padding:20px;
 
 .timeline-container{
   grid-column: 2 / span 10;
-  padding: 10px;
 
   color: white;
   background-color: var(--transColor);
 
-  
-  margin-bottom: var(--bottomSpacing);
-
+  margin-bottom: 10px;
   font-size: 1rem;
 
   display:grid;
@@ -331,14 +328,14 @@ blockquoteright {
   text-align: right;
 }
 
-blockquote h6, blockquoteright h6, blockquoterightsmall h6{
+blockquote h6, blockquoteright h6, blockquoterightsmall h6, blockquotenospace h6{
   color: var(--lightText);
   font-size: 2.2rem;
   line-height: 1;
   text-shadow: 3px 3px 0 var(--blockquoteOutlineColor), 3px -3px 0 var(--blockquoteOutlineColor), -3px 3px 0 var(--blockquoteOutlineColor), -3px -3px 0 var(--blockquoteOutlineColor), 3px 0px 0 var(--blockquoteOutlineColor), 0px 4px 0 var(--blockquoteOutlineColor), -3px 0px 0 var(--blockquoteOutlineColor), 0px -3px 0 var(--blockquoteOutlineColor);
 }
 
-blockquote p, blockquoteright p, blockquoterightsmall p{
+blockquote p, blockquoteright p, blockquoterightsmall p, blockquotenospace p, blockquotenospaceright p{
   color: var(--lightText);
   font-size: 1.5rem;
   line-height: 1;
@@ -354,6 +351,21 @@ blockquoterightsmall {
   text-align: right;
 }
 
+blockquotenospace {
+  margin: 0;
+  padding: 0;
+  grid-column: 2 / span 9;
+  line-height: 1;
+  text-align: left;
+}
+
+blockquotenospaceright {
+  margin: 0;
+  padding: 0;
+  grid-column: 3 / span 9;
+  line-height: 1;
+  text-align: right;
+}
 
 
 /*
