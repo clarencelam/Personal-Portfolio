@@ -29,20 +29,23 @@
   </section>
 -->
     <blockquote>
-      <h6>Hi! I'm Clarence. 👋</h6>
+      <h6>Hi! I'm Clarence 👋</h6>
     </blockquote>
 
     <blockquoteright>
-      <h6>🛠️ I'm a technology professional with a passion for building software. <br>💻 I made this website to showcase
-        my work and my career journey so far.</h6>
+      <h6>🛠️ I'm a technology professional with a passion for building software <br>💻 I made this website to showcase
+        my work and my career journey so far</h6>
     </blockquoteright>
 
-
     <blockquote>
-      <h6>Scroll on to learn more about me & the stuff I've coded. 👨‍💻</h6>
+      <h6>Scroll on to learn more about me & the stuff I've coded 👨‍💻</h6>
     </blockquote>
 
-    <blockquoterightsmall>
+    <blockquoteright>
+      <h6>Or use the navbar to jump to where you want to go</h6>
+    </blockquoteright>
+
+      <!-- 
       <div class="column-container">
         <div class="column">
           <h6 onclick="startScroll()">🔽</h6>
@@ -53,11 +56,9 @@
         <div class="column">
           <h6 onclick="stopScroll()">🛑</h6>
         </div>
-        <div class="longcolumn">
-          <h6>Or use these buttons if you're lazy <br>(refresh to stop auto-scroll)</h6>
-        </div>
+      </div>
 
-
+-->
         <script>
           function pageScroll() {
             window.scrollBy(0, 1);
@@ -83,14 +84,31 @@
             clearTimeout(scrolldelay)
           }
         </script>
-      </div>
 
-    </blockquoterightsmall>
-
-
+<div class="header">
+    <nav id="navbar">
+      <ul id="menu">
+        <li>TOP</li>
+        <li>PORTFOLIO</li>
+        <li>PROFESSIONAL HISTORY</li>
+        <li>OTHER PROJECTS</li>
+        <li>
+          <h6 onclick="startScroll()">🔽</h6>
+        </li>
+        <li>
+          <h6 onclick="doubleScroll()">⏬</h6>
+        </li>
+        <li>
+          <h6 onclick="stopScroll()">🛑</h6>
+        </li>
+      </ul>
+    </nav>
+  </div>
+    <!-- 
     <section class="subheader">
       <h3>⌨️ SOME SOFTWARE I'VE BUILT:</h3>
     </section>
+-->
 
     <blockquote>
       <p>🚧 UNDER CONSTRUCTION 🚧 </p>
@@ -409,11 +427,27 @@
     </blockquote>
 
 
+    <script>
+      var navbar = document.getElementById("navbar");
+      var menu = document.getElementById("menu");
+    
+      window.onscroll = function(){
+        console.log("heyo")
 
+        if(window.pageYOffset >= menu.offsetTop){
+          navbar.classList.add("sticky");
+          console.log("heyo")
+        }
+        else{
+          navbar.classList.remove("sticky")
+        }
+      }
+    </script>
+  
   </main>
 
 
-  <script type="module" src="/main.js"></script>
+  <script type="module" src="/main.js"></script>  
 </body>
 
 </html>

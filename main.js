@@ -62,6 +62,10 @@ Array(numstars).fill().forEach(addStar);
 const spaceTexture = new THREE.TextureLoader().load('astronomy.jpg');
 scene.background = spaceTexture;
 
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+
 function moveCamera(){
   const t = document.body.getBoundingClientRect().top;
 
@@ -74,13 +78,55 @@ function moveCamera(){
   camera.position.x = t * -0.0002;
   camera.rotation.y = t * -0.0002;
 
+  if(window.pageYOffset >= sticky){
+    navbar.classList.add("sticky");
+    console.log("pastnav")
+  } else{
+    navbar.classList.remove("sticky")
+    console.log("not past nav")
+  }
 }
+
+
 document.body.onscroll = moveCamera;
 moveCamera()
 
-// Auto Scroll
+
+
+
+function animate(){
+  requestAnimationFrame(animate);
+
+  torus.rotation.x += 0.01;
+  torus.rotation.y += 0.005;
+  torus.rotation.z += 0.01;
+
+  // controls.update();
+
+  renderer.render(scene,camera);
+}
+animate();
+
+
+
 
 /*
+
+
+function stickyNav (){
+  if(window.pageYOffset >= menu.offsetTop){
+    navbar.classList.add("sticky");
+    console.log("heyo")
+  }
+  else{
+    navbar.classList.remove("sticky")
+  }
+}
+
+
+
+Auto Scroll
+
 let autoscroll = false;
 
 function toggleScroll(){
@@ -109,16 +155,3 @@ document.addEventListener('DOMContentLoaded', function () {
 
 pageScroll()
 */
-
-function animate(){
-  requestAnimationFrame(animate);
-
-  torus.rotation.x += 0.01;
-  torus.rotation.y += 0.005;
-  torus.rotation.z += 0.01;
-
-  // controls.update();
-
-  renderer.render(scene,camera);
-}
-animate();

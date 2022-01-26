@@ -31,7 +31,7 @@ canvas{
 }
 
 body::-webkit-scrollbar {
-width: 0.8rem;
+width: 1rem;
 }
 
 body::-webkit-scrollbar-track {
@@ -41,6 +41,12 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   background: darkslategray;
 }
+
+/* need this line to eliminate left whitespace */
+body {
+  margin: 0;
+  }
+  
 
 main {
   width: 100vw;
@@ -106,23 +112,72 @@ h6 { font-size: 16px;}
   -moz-box-shadow: 5px 5px 0px 2px rgba(6,54,6,1);
 }
 
+/* STYLING NAVBAR */
+
+.header{
+  grid-column: 1 / -1;
+
+  width:100%;
+  height: 10vh;
+  background-position: center;
+  background-size: cover;
+}
+
+nav{
+  overflow: hidden;
+display:block;
+margin-bottom: 40px;  
+text-align: center;
+border-top: 10px solid var(--borderColor);
+border-bottom: 10px solid var(--borderColor);
+z-index: 9
+}
+
+nav ul{
+  background: black;
+  width:100%;
+  margin: 0px;
+}
+
+nav ul li{
+  display: inline-block;
+  list-style: none;
+  margin: 20px 30px;
+
+  color:white;
+  color: var(--lightText);
+  font-size: 1.5rem;
+  line-height: 1;
+  text-shadow: 3px 3px 0 var(--blockquoteOutlineColor), 3px -3px 0 var(--blockquoteOutlineColor), -3px 3px 0 var(--blockquoteOutlineColor), -3px -3px 0 var(--blockquoteOutlineColor), 3px 0px 0 var(--blockquoteOutlineColor), 0px 4px 0 var(--blockquoteOutlineColor), -3px 0px 0 var(--blockquoteOutlineColor), 0px -3px 0 var(--blockquoteOutlineColor);
+
+}
+
+nav.sticky{
+  position: fixed;
+  top:0;
+  width:100%;
+  background: #000;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 9
+}
+
 /* STYLING SUBHEADER */
 
 .subheader {
 grid-column: 2 / span 6;
 background: var(--mainColor);
 margin-bottom: 100px; 
+border: var(--borderSize) solid var(--transColor);
+
 font-size: rem;
 color: var(--mainText);
 text-shadow: 2px 2px 0px #ffffff;
 
-
-
-  border: var(--borderSize) solid var(--transColor);
-  
-  box-shadow: 6px 6px 0px 3px var(--shadowColor);
-  -webkit-box-shadow: 6px 6px 0px 3px var(--shadowColor);
-  -moz-box-shadow: 6px 6px 0px 3px var(--shadowColor);
+box-shadow: 6px 6px 0px 3px var(--shadowColor);
+-webkit-box-shadow: 6px 6px 0px 3px var(--shadowColor);
+-moz-box-shadow: 6px 6px 0px 3px var(--shadowColor);
 }
 
 /* STYLING TEXTBOX */
@@ -386,7 +441,7 @@ blockquote {
   margin: 0;
   padding: 0;
   grid-column: 2 / span 9;
-  margin-bottom: var(--bottomSpacing);
+  margin-top: var(--bottomSpacing);
   line-height: 1;
   text-align: left;
 
@@ -396,7 +451,7 @@ blockquoteright {
   margin: 0;
   padding: 0;
   grid-column: 3 / span 9;
-  margin-bottom: var(--bottomSpacing);
+  margin-top: var(--bottomSpacing);
   line-height: 1;
   text-align: right;
 }
@@ -420,7 +475,7 @@ blockquoterightsmall {
   padding: 0;
   
   grid-column: 8 / span 4;
-  margin-bottom: var(--bottomSpacing);
+  margin-top: var(--bottomSpacing);
   text-align: right;
 }
 
