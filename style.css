@@ -8,6 +8,8 @@ canvas{
   --mainColor: rgba(228, 228, 228, 0.85);
   --secondaryColor:rgba(255, 255, 255, 0.8);
   --darkBgColor: rgba(34, 34, 34, 0.795);
+  --darkBgColorTrans: rgba(34, 34, 34, 0.301);
+  --darkBgColorSolid: rgb(34, 34, 34);
   --transColor: rgba(255, 255, 255, 0);
   --blockquoteOutlineColor: #3b3b3b;
   
@@ -204,50 +206,60 @@ text-shadow: 2px 2px 0px #ffffff;
 
   display:grid;
   grid-template-columns: 1fr;
-  gap:40px;
+  gap:0px;
+  
   justify-content: left;
 }
 
 .project-tile{
   background: var(--transColor);
-  border: var(--borderSize) solid var(--transColor);
   display:grid;
   grid-template-columns:  1fr 1fr;
-  grid-gap: var(--borderSize);
+  
   margin-bottom: 80px;
-  transition: all 0.5s ease;
+  transition: all .5s ease;
 }
 
 .project-tile:hover{
-  color: rgba(255, 255, 255, 1);
-  box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
+  box-shadow: 0 0 10px 5px rgb(47, 79, 79);
+  background: rgb(47, 79, 79);
+
+  transform: scale(1.02);
 }
 
 .project-leftside{
-    background: var(--darkBgColor);
+    transition: all 0.5s ease;
 }
 
 .project-rightside{
   opacity: 0;
-  background: var(--transColor);
+  background: var(--darkBgColor);
   padding:20px;  
-  margin: auto;
   transition: all 0.5s ease;
 
 }
 
 .project-leftside:hover + .project-rightside{
 display: block;
-color:black;
-background: var(--darkBgColor);
 opacity: 1;
 }
 
 .project-rightside:hover{
   display: block;
-  color:black;
-  background: var(--darkBgColor);
   opacity: 1;
+  }
+
+.project-rightside >*{
+  transform: translateX(-30px);
+  transition: transform 0.5s;
+}
+
+.project-rightside:hover >*{
+  transform: translateX(0);
+}
+
+.project-leftside:hover + .project-rightside>*{
+  transform: translateX(0);
   }
   
 
