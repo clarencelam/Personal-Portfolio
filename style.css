@@ -121,20 +121,31 @@ h6 { font-size: 16px;}
   height: 10vh;
   background-position: center;
   background-size: cover;
+
+  margin-top: 80px;
+
 }
 
 nav{
-  overflow: hidden;
+overflow: hidden;
 display:block;
-margin-bottom: 40px;  
+
+padding:0;
+
 text-align: center;
-border-top: 10px solid var(--borderColor);
-border-bottom: 10px solid var(--borderColor);
-z-index: 9
+border-top: 8px solid var(--borderColor);
+border-bottom: 8px solid var(--borderColor);
+z-index: 9;
+
+transition: all .5s ease;
+}
+
+nav:hover{
+  background-color: var(--shadowColor);
 }
 
 nav ul{
-  background: black;
+  background: transparent;
   width:100%;
   margin: 0px;
 }
@@ -143,12 +154,13 @@ nav ul li{
   display: inline-block;
   list-style: none;
   margin: 20px 30px;
+  margin-bottom: 18px;
+  margin-top:18px;
 
-  color:white;
+  text-shadow: 4px 4px 0px black, 2px 2px 0 black, 2px -2px 0 black, -2px 2px 0 black, -2px -2px 0 black, 2px 0px 0 black, 0px 2px 0 black, -2px 0px 0 black, 0px -2px 0 black;
   color: var(--lightText);
   font-size: 1.5rem;
   line-height: 1;
-  text-shadow: 3px 3px 0 var(--blockquoteOutlineColor), 3px -3px 0 var(--blockquoteOutlineColor), -3px 3px 0 var(--blockquoteOutlineColor), -3px -3px 0 var(--blockquoteOutlineColor), 3px 0px 0 var(--blockquoteOutlineColor), 0px 4px 0 var(--blockquoteOutlineColor), -3px 0px 0 var(--blockquoteOutlineColor), 0px -3px 0 var(--blockquoteOutlineColor);
 
 }
 
@@ -156,11 +168,15 @@ nav.sticky{
   position: fixed;
   top:0;
   width:100%;
-  background: #000;
-  display:flex;
-  align-items: center;
-  justify-content: space-between;
-  z-index: 9
+  overflow: hidden;
+display:block;
+margin-bottom: 40px;  
+text-align: center;
+
+
+z-index: 9;
+
+background: var(--shadowColor)
 }
 
 /* STYLING SUBHEADER */
@@ -201,10 +217,12 @@ box-shadow: 6px 6px 0px 3px var(--shadowColor);
 
 
 .column-container{
+  grid-column: 3 / span 6;
+
   border: 0px solid white;
   display:grid;
-  grid-template: "1fr 1fr 1fr" auto;
-  grid-template-rows: none;
+  grid-template: "1fr 1fr " auto;
+  grid-template-rows: 1;
   gap:0px;
   margin-bottom: 0px;
   
@@ -247,6 +265,7 @@ box-shadow: 6px 6px 0px 3px var(--shadowColor);
 /* ---------- STYLING LARGE TILES FOR MAIN PROJECTS ---------- */
 :root {
   --tile-margins: 30px;
+  --popout-scale: scale(1.04)
 }
 
 .project-container{
@@ -273,7 +292,7 @@ box-shadow: 6px 6px 0px 3px var(--shadowColor);
 }
 
 .project-tile:hover{
-  transform: scale(1.02);
+  transform: var(--popout-scale);
 }
 
 .project-leftside{
@@ -317,7 +336,7 @@ opacity: 1;
 }
 
 .R-project-tile:hover{
-  transform: scale(1.02);
+  transform: var(--popout-scale);
 }
 
 .R-project-leftside{
@@ -456,12 +475,20 @@ blockquoteright {
   text-align: right;
 }
 
-blockquote h6, blockquoteright h6, blockquoterightsmall h6, blockquotenospace h6{
+blockquote h6, blockquoteright h6, blockquoterightsmall h6, blockquotenospace h6, blockquotenospaceright h6{
   color: var(--lightText);
   font-size: 2.2rem;
   line-height: 1;
   text-shadow: 3px 3px 0 var(--blockquoteOutlineColor), 3px -3px 0 var(--blockquoteOutlineColor), -3px 3px 0 var(--blockquoteOutlineColor), -3px -3px 0 var(--blockquoteOutlineColor), 3px 0px 0 var(--blockquoteOutlineColor), 0px 4px 0 var(--blockquoteOutlineColor), -3px 0px 0 var(--blockquoteOutlineColor), 0px -3px 0 var(--blockquoteOutlineColor);
 }
+
+blockquote h4, blockquoteright h4, blockquoterightsmall h4, blockquotenospace h4, blockquotenospaceright h4{
+  color: var(--lightText);
+  font-size: 1.8rem;
+  line-height: 1;
+  text-shadow: 3px 3px 0 var(--blockquoteOutlineColor), 3px -3px 0 var(--blockquoteOutlineColor), -3px 3px 0 var(--blockquoteOutlineColor), -3px -3px 0 var(--blockquoteOutlineColor), 3px 0px 0 var(--blockquoteOutlineColor), 0px 4px 0 var(--blockquoteOutlineColor), -3px 0px 0 var(--blockquoteOutlineColor), 0px -3px 0 var(--blockquoteOutlineColor);
+}
+
 
 blockquote p, blockquoteright p, blockquoterightsmall p, blockquotenospace p, blockquotenospaceright p{
   color: var(--lightText);
