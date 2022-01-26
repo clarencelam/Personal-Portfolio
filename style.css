@@ -215,17 +215,41 @@ text-shadow: 2px 2px 0px #ffffff;
   grid-template-columns:  1fr 1fr;
   grid-gap: var(--borderSize);
   margin-bottom: 80px;
-
+  transition: all 0.5s ease;
 }
+
+.project-tile:hover{
+  color: rgba(255, 255, 255, 1);
+  box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
+}
+
 .project-leftside{
     background: var(--darkBgColor);
-
 }
+
 .project-rightside{
+  opacity: 0;
   background: var(--transColor);
   padding:20px;  
   margin: auto;
+  transition: all 0.5s ease;
+
 }
+
+.project-leftside:hover + .project-rightside{
+display: block;
+color:black;
+background: var(--darkBgColor);
+opacity: 1;
+}
+
+.project-rightside:hover{
+  display: block;
+  color:black;
+  background: var(--darkBgColor);
+  opacity: 1;
+  }
+  
 
 .project-pic{
   display:block;
