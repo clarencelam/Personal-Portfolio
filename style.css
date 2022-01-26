@@ -133,8 +133,8 @@ display:block;
 padding:0;
 
 text-align: center;
-border-top: 8px solid var(--borderColor);
-border-bottom: 8px solid var(--borderColor);
+border-top: 5px solid var(--shadowColor);
+border-bottom: 5px solid var(--shadowColor);
 z-index: 9;
 
 transition: all .5s ease;
@@ -484,7 +484,7 @@ blockquote h6, blockquoteright h6, blockquoterightsmall h6, blockquotenospace h6
 
 blockquote h4, blockquoteright h4, blockquoterightsmall h4, blockquotenospace h4, blockquotenospaceright h4{
   color: var(--lightText);
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   line-height: 1;
   text-shadow: 3px 3px 0 var(--blockquoteOutlineColor), 3px -3px 0 var(--blockquoteOutlineColor), -3px 3px 0 var(--blockquoteOutlineColor), -3px -3px 0 var(--blockquoteOutlineColor), 3px 0px 0 var(--blockquoteOutlineColor), 0px 4px 0 var(--blockquoteOutlineColor), -3px 0px 0 var(--blockquoteOutlineColor), 0px -3px 0 var(--blockquoteOutlineColor);
 }
@@ -508,20 +508,31 @@ blockquoterightsmall {
 
 blockquotenospace {
   margin: 0;
-  padding: 0;
+  padding-left:15px;
   grid-column: 2 / span 9;
   line-height: 1;
   text-align: left;
+  transition: all .5s ease;
+
+}
+
+blockquotenospace:hover{
+  background-color: black;
 }
 
 blockquotenospaceright {
   margin: 0;
-  padding: 0;
+  padding-right: 15px;
   grid-column: 3 / span 9;
   line-height: 1;
   text-align: right;
+  transition: all .5s ease;
+
 }
 
+blockquotenospaceright:hover{
+  background-color: black;
+}
 
 
 /* --------- OLD CODE FOR REFERENCE ----------*/
