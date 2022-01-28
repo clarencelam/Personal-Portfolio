@@ -112,6 +112,37 @@ h6 { font-size: 16px;}
   -moz-box-shadow: 5px 5px 0px 2px rgba(6,54,6,1);
 }
 
+/* STYLING BUTTONS */
+button {
+  display: inline-block;
+  border: none;
+  margin: 0;
+  text-decoration: none;
+  background: var(--transColor);
+  cursor: pointer;
+  transition: all .5s ease;
+
+}
+
+button:hover,
+button:focus {
+  transform: scale(1.1);
+}
+
+
+button:active {
+  transform: scale(0.8);
+}
+
+/* HIGHLIGHTER CLASS */
+highlight {
+  transition: all .5s ease;
+}
+
+highlight:hover{
+  background-color: black;
+}
+
 /* STYLING NAVBAR */
 
 .header{
@@ -164,6 +195,8 @@ nav ul li{
 
 }
 
+
+
 nav.sticky{
   position: fixed;
   top:0;
@@ -197,6 +230,14 @@ transition: all .5s ease;
   background-color: var(--shadowColor);
 }
 
+/* testing a hoverbox div */
+hoverbox{
+  transition: all .5s ease;
+}
+hoverbox:hover{
+  transform: scale(1.1);
+}
+
 /* STYLING TEXTBOX */
 
 .textbox {
@@ -218,7 +259,7 @@ transition: all .5s ease;
 
 
 .column-container{
-  grid-column: 3 / span 6;
+  grid-column: 4 / span 6;
 
   border: 0px solid white;
   display:grid;
@@ -233,7 +274,7 @@ transition: all .5s ease;
   border: 0px solid white;
   padding: 0rem;
   margin: 0px;
-  text-align: right;
+  text-align: center;
 }
 
 .longcolumn{
@@ -457,40 +498,43 @@ padding:20px;
 
 /* STYLING BLOCKQUOTE FOR LARGE TEXT 1 LINERS */
 
+:root{
+  --blockquotespacing: 10px
+}
+
 blockquote {
   margin: 0;
-  padding-left: 20px;
   grid-column: 2 / span 9;
-  margin-top: var(--bottomSpacing);
+  margin-top: var(--blockquotespacing);
   line-height: 1;
   text-align: left;
   transition: all .5s ease;
 
 }
 
-blockquote:hover {
-  background-color: black;
-}
-
 blockquoteright {
   margin: 0;
-  padding-right: 20px;
   grid-column: 3 / span 9;
-  margin-top: var(--bottomSpacing);
+  margin-top: var(--blockquotespacing);
   line-height: 1;
   text-align: right;
   transition: all .5s ease;
 }
 
-blockquoteright:hover {
-  background-color: black;
-}
 
 blockquote h6, blockquoteright h6, blockquoterightsmall h6, blockquotenospace h6, blockquotenospaceright h6, addspace h6{
   color: var(--lightText);
-  font-size: 2.2rem;
-  line-height: 1;
+  font-size: 2rem;
   text-shadow: 3px 3px 0 var(--blockquoteOutlineColor), 3px -3px 0 var(--blockquoteOutlineColor), -3px 3px 0 var(--blockquoteOutlineColor), -3px -3px 0 var(--blockquoteOutlineColor), 3px 0px 0 var(--blockquoteOutlineColor), 0px 4px 0 var(--blockquoteOutlineColor), -3px 0px 0 var(--blockquoteOutlineColor), 0px -3px 0 var(--blockquoteOutlineColor);
+}
+
+blockquote h6, blockquotenospace h6, blockquoteright h6, blockquoterightnospace h6{
+  transition: all .5s ease;
+  padding:20px;  
+}
+
+blockquote h6:hover, blockquoteright h6:hover{
+  background-color: black;
 }
 
 blockquote h4, blockquoteright h4, blockquoterightsmall h4, blockquotenospace h4, blockquotenospaceright h4{

@@ -28,15 +28,19 @@
       🖱️ Scroll on to learn more about me & the stuff I've built so far.</p>
   </section>
 -->
-
-<div class="column-container">
-  <div class="column">
-    <h1 onclick="startScroll()">🔽</h1>
-  </div>
-  <div class="column">
-    <h1 onclick="doubleScroll()">⏬</h1>
-  </div>
-</div>
+    <a id="top"></a>
+    <div class="column-container">
+      <div class="column">
+        <button>
+          <h1 onclick="startScroll()">🔽</h1>
+        </button>
+      </div>
+      <div class="column">
+        <button>
+          <h1 onclick="doubleScroll()">⏬</h1>
+        </button>
+      </div>
+    </div>
 
     <blockquote>
       <h6>Hi! I'm Clarence 👋</h6>
@@ -56,10 +60,10 @@
         👇 Or use the navbar to jump to wherever you want to see first
       </h6>
     </blockquoteright>
-  
-  
 
-      <!-- 
+
+
+    <!-- 
       <div class="column-container">
         <div class="column">
           <h6 onclick="startScroll()">🔽</h6>
@@ -73,51 +77,57 @@
       </div>
 
 -->
-        <script>
-          function pageScroll() {
-            window.scrollBy(0, 1);
-            scrolldelay = setTimeout(pageScroll, 20)
-          }
-          function doublePageScroll() {
-            window.scrollBy(0, 1);
-            scrolldelay = setTimeout(doublePageScroll, 5)
-          }
-          function startScroll() {
-            if (typeof scrolldelay !== 'undefined') {
-              clearTimeout(scrolldelay);
-            }
-            pageScroll();
-          }
-          function doubleScroll() {
-            if (typeof scrolldelay !== 'undefined') {
-              clearTimeout(scrolldelay);
-            }
-            doublePageScroll();
-          }
-          function stopScroll() {
-            clearTimeout(scrolldelay)
-          }
-        </script>
+    <script>
+      function pageScroll() {
+        window.scrollBy(0, 1);
+        scrolldelay = setTimeout(pageScroll, 20)
+      }
+      function doublePageScroll() {
+        window.scrollBy(0, 1);
+        scrolldelay = setTimeout(doublePageScroll, 5)
+      }
+      function startScroll() {
+        if (typeof scrolldelay !== 'undefined') {
+          clearTimeout(scrolldelay);
+        }
+        pageScroll();
+      }
+      function doubleScroll() {
+        if (typeof scrolldelay !== 'undefined') {
+          clearTimeout(scrolldelay);
+        }
+        doublePageScroll();
+      }
+      function stopScroll() {
+        clearTimeout(scrolldelay)
+      }
+    </script>
 
-<div class="header">
-    <nav id="navbar">
-      <ul id="menu">
-        <li>TOP</li>
-        <li>PORTFOLIO</li>
-        <li>PROFESSIONAL HISTORY</li>
-        <li>OTHER PROJECTS</li><br>
-        <li>
+    <div class="header">
+      <nav id="navbar">
+        <ul id="menu">
+          <button><a href="#TOP">
+              <li>TOP</li>
+            </a></button>
+          <button><a href="#PORTFOLIO">
+              <li>PORTFOLIO</li>
+            </a></button>
+          <button><a href="#PROFHISTORY">
+              <li>PROFESSIONAL HISTORY</li>
+            </a></button>
+          <button><a href="#PROJECTS"><li>OTHER PROJECTS</li></a></button><br>
+          <li>
           <li onclick="startScroll()">🔽</li>
-        </li>
-        <li>
+          </li>
+          <li>
           <li onclick="doubleScroll()">⏬</li>
-        </li>
-        <li>
+          </li>
+          <li>
           <li onclick="stopScroll()">🛑</li>
-        </li>
-      </ul>
-    </nav>
-  </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
 
 
     <!-- 
@@ -126,45 +136,55 @@
     </section>
 -->
 
-<addspace><h6></h6></addspace>
-<addspace><h6></h6></addspace>
+    <addspace>
+      <h6></h6>
+    </addspace>
+    <addspace>
+      <h6></h6>
+    </addspace>
 
-<blockquotenospace>
-  <h4>First off, my portfolio of software projects. By far the most progress I've had in learning to be a proficient programmer, 
-    have been while I was sitting down and writing code.</h4>
-</blockquotenospace>
+    <blockquotenospace>
+      <h4>First off, my portfolio of software projects. By far the most progress I've had in learning to be a proficient
+        programmer,
+        have been while I was sitting down and writing code.</h4>
+    </blockquotenospace>
 
 
-<blockquotenospaceright>
+    <blockquotenospaceright>
       <!------------ UPDATE HERE ------------>
-  <h4>As of the last time this website was 
-    updated (January 2022), 
-    I've been actively training for a career as a developer 
-    for around 8 months. So I don't have as many projects as I'd like to. </h4>
+      <h4>As of the last time this website was
+        updated (January 2022),
+        I've been actively training for a career as a developer
+        for around 8 months. So I don't have as many projects as I'd like to. </h4>
       <!------------ UPDATE HERE ------------>
-</blockquotenospaceright>
+    </blockquotenospaceright>
 
-<blockquotenospace>
-  <h4>
-    But the ones I do have, have helped me learn so much about the process of software development -- 
-    and realize how rediculously much more there is to learn.
-    </h4>
-</blockquotenospace>
+    <blockquotenospace>
+      <h4>
+        But the ones I do have, have helped me learn so much about the process of software development --
+        and realize how rediculously much more there is to learn.
+      </h4>
+    </blockquotenospace>
 
 
-<blockquotenospaceright>
-  <h4>For now, the live demos of the projects I have are hosted on free web hosting platforms (mostly Herokuapp's free tier), so you may experience longer-than-usual load times.
-   Thanks for waiting!</h4>
-</blockquotenospaceright>
+    <blockquotenospaceright>
+      <h4>For now, the live demos of the projects I have are hosted on free web hosting platforms (mostly Herokuapp's
+        free tier), so you may experience longer-than-usual load times.
+        Thanks for waiting!</h4>
+    </blockquotenospaceright>
 
-<blockquotenospace>
-  <h4>The ones I've worked on most recently are on top. Hover for more details.</h4>
-</blockquotenospace>
+    <blockquotenospace>
+      <h4>The ones I've worked on most recently are on top. Hover for more details.</h4>
+    </blockquotenospace>
 
-<blockquote><p></p></blockquote>
-<section class="subheader">
-  <h3>💼 PORTFOLIO</h3>
-</section>
+
+    <a id="PORTFOLIO"></a>
+    <addspace>
+      <h6></h6>
+    </addspace>
+    <section class="subheader">
+      <h3>💼 PORTFOLIO</h3>
+    </section>
 
     <blockquotenospace>
       <p>🚧 UNDER CONSTRUCTION 🚧 </p>
@@ -316,9 +336,16 @@
           </ul>
         </div>
       </div>
-
     </section>
 
+    <addspace></addspace>
+    <a id="PROFHISTORY"></a>
+    <addspace>
+      <h6></h6>
+    </addspace>
+    <addspace>
+      <h6></h6>
+    </addspace>
 
     <section class="subheader">
       <h3>💼 A BRIEF PROFESSIONAL HISTORY:</h3>
@@ -397,7 +424,11 @@
       </div>
     </section>
 
+<addspace><h6></h6></addspace>
+<addspace><h6></h6></addspace>
 
+    <a id="PROJECTS"></a>
+    <addspace><h6></h6></addspace>
 
     <section class="subheader">
       <h3>⌨️ OTHER PROJECTS I'M PROUD OF:</h3>
@@ -486,24 +517,24 @@
     <script>
       var navbar = document.getElementById("navbar");
       var menu = document.getElementById("menu");
-    
-      window.onscroll = function(){
+
+      window.onscroll = function () {
         console.log("heyo")
 
-        if(window.pageYOffset >= menu.offsetTop){
+        if (window.pageYOffset >= menu.offsetTop) {
           navbar.classList.add("sticky");
           console.log("heyo")
         }
-        else{
+        else {
           navbar.classList.remove("sticky")
         }
       }
     </script>
-  
+
   </main>
 
 
-  <script type="module" src="/main.js"></script>  
+  <script type="module" src="/main.js"></script>
 </body>
 
 </html>
