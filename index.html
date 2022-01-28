@@ -29,18 +29,17 @@
   </section>
 -->
     <a id="top"></a>
+    <!-- 
+      SCROLL BUTTON
     <div class="column-container">
       <div class="column">
-        <button>
+        <button class="tooltip">
           <h1 onclick="startScroll()">🔽</h1>
-        </button>
-      </div>
-      <div class="column">
-        <button>
-          <h1 onclick="doubleScroll()">⏬</h1>
+          <span class="tooltiptext"><h6>Press space to stop auto-scroll</h6></span>
         </button>
       </div>
     </div>
+    -->
 
     <blockquote>
       <h6>Hi! I'm Clarence 👋</h6>
@@ -52,12 +51,21 @@
     </blockquoteright>
 
     <blockquote>
-      <h6>Scroll on to learn more about me & the stuff I've coded 👨‍💻</h6>
+      <h6>Scroll on to learn more about me & the stuff I've coded 👨‍💻
+        <br>
+        Or use this button if you're lazy: <button class="tooltip" onclick="startScroll()">
+          🔽
+          <span class="tooltiptext">
+            <p>note: press the S key or refresh to stop auto-scroll</p>
+          </span>
+        </button>
+
+      </h6>
     </blockquote>
 
     <blockquoteright>
       <h6>
-        👇 Or use the navbar to jump to wherever you want to see first
+        👇 And of course, feel free use the navbar to jump to wherever you want
       </h6>
     </blockquoteright>
 
@@ -101,6 +109,15 @@
       function stopScroll() {
         clearTimeout(scrolldelay)
       }
+
+      document.addEventListener('keyup', event => {
+        if (event.code === 'KeyS' && typeof scrolldelay === 'number') {
+          stopScroll();
+        } else {
+          startScroll();
+        }
+      })
+
     </script>
 
     <div class="header">
@@ -115,7 +132,9 @@
           <button><a href="#PROFHISTORY">
               <li>PROFESSIONAL HISTORY</li>
             </a></button>
-          <button><a href="#PROJECTS"><li>OTHER PROJECTS</li></a></button><br>
+          <button><a href="#PROJECTS">
+              <li>OTHER PROJECTS</li>
+            </a></button><br>
           <li>
           <li onclick="startScroll()">🔽</li>
           </li>
@@ -424,11 +443,17 @@
       </div>
     </section>
 
-<addspace><h6></h6></addspace>
-<addspace><h6></h6></addspace>
+    <addspace>
+      <h6></h6>
+    </addspace>
+    <addspace>
+      <h6></h6>
+    </addspace>
 
     <a id="PROJECTS"></a>
-    <addspace><h6></h6></addspace>
+    <addspace>
+      <h6></h6>
+    </addspace>
 
     <section class="subheader">
       <h3>⌨️ OTHER PROJECTS I'M PROUD OF:</h3>
