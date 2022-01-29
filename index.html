@@ -21,13 +21,6 @@
   <main>
     <script src="src=/main.js"></script>
 
-    <!--
-  <section class="s1">
-    <h1>CLARENCE LAM</h1>
-    <p>💻 Technology professional with a love of building software.<br />
-      🖱️ Scroll on to learn more about me & the stuff I've built so far.</p>
-  </section>
--->
     <a id="top"></a>
     <!-- 
       SCROLL BUTTON
@@ -53,10 +46,10 @@
     <blockquote>
       <h6>Scroll on to learn more about me & the stuff I've coded 👨‍💻
         <br>
-        Or use this button if you're lazy: <button class="tooltip" onclick="startScroll()">
+        Or use this button if you're lazy ➝        <button class="tooltip" onclick="startScroll()">
           🔽
           <span class="tooltiptext">
-            <p>note: press the S key or refresh to stop auto-scroll</p>
+            <p>note: press the ESC key or refresh to stop auto-scroll</p>
           </span>
         </button>
 
@@ -71,20 +64,6 @@
 
 
 
-    <!-- 
-      <div class="column-container">
-        <div class="column">
-          <h6 onclick="startScroll()">🔽</h6>
-        </div>
-        <div class="column">
-          <h6 onclick="doubleScroll()">⏬</h6>
-        </div>
-        <div class="column">
-          <h6 onclick="stopScroll()">🛑</h6>
-        </div>
-      </div>
-
--->
     <script>
       function pageScroll() {
         window.scrollBy(0, 1);
@@ -111,7 +90,7 @@
       }
 
       document.addEventListener('keyup', event => {
-        if (event.code === 'KeyS' && typeof scrolldelay === 'number') {
+        if (event.code === 'Escape' && typeof scrolldelay === 'number') {
           stopScroll();
         } else {
           startScroll();
@@ -120,40 +99,33 @@
 
     </script>
 
+    <!-- NAVBAR -->
+
     <div class="header">
       <nav id="navbar">
         <ul id="menu">
-          <button><a href="#TOP">
-              <li>TOP</li>
-            </a></button>
-          <button><a href="#PORTFOLIO">
-              <li>PORTFOLIO</li>
-            </a></button>
-          <button><a href="#PROFHISTORY">
-              <li>PROFESSIONAL HISTORY</li>
-            </a></button>
-          <button><a href="#PROJECTS">
-              <li>OTHER PROJECTS</li>
-            </a></button><br>
-          <li>
-          <li onclick="startScroll()">🔽</li>
-          </li>
-          <li>
-          <li onclick="doubleScroll()">⏬</li>
-          </li>
-          <li>
-          <li onclick="stopScroll()">🛑</li>
-          </li>
+          <a href="#TOP">
+            <button><li>TOP</li></button>
+            </a>
+          <a href="#PORTFOLIO">
+            <button><li>PORTFOLIO</li></button>
+            </a>
+          <a href="#PROFHISTORY">
+            <button><li>PROFESSIONAL HISTORY</li></button>
+            </a>
+          <a href="#PROJECTS">
+            <button><li>OTHER PROJECTS</li></button>
+            </a>
+            <br>
+       
+          <button><li onclick="startScroll()">🔽</li></button>
+          <button><li onclick="doubleScroll()">⏬</li></button>
+          <button><li onclick="stopScroll()">🛑</li></button>
         </ul>
       </nav>
     </div>
 
 
-    <!-- 
-    <section class="subheader">
-      <h3>⌨️ SOME SOFTWARE I'VE BUILT:</h3>
-    </section>
--->
 
     <addspace>
       <h6></h6>
@@ -161,6 +133,8 @@
     <addspace>
       <h6></h6>
     </addspace>
+
+    <!-- PORTFOLIO INTRO -->
 
     <blockquotenospace>
       <h4>First off, my portfolio of software projects. By far the most progress I've had in learning to be a proficient
