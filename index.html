@@ -90,7 +90,7 @@
       }
 
       document.addEventListener('keyup', event => {
-        if (event.code === 'Escape' && typeof scrolldelay === 'number') {
+        if (event.code === 'Escape' || event.code === 'KeyS' && typeof scrolldelay === 'number') {
           stopScroll();
         } else {
           startScroll();

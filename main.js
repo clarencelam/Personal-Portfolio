@@ -65,7 +65,7 @@ scene.background = spaceTexture;
 var navbar = document.getElementById("navbar");
 var sticky = navbar.offsetTop;
 
-
+// Function to move camera in 3d enviornment 
 function moveCamera(){
   const t = document.body.getBoundingClientRect().top;
 
@@ -78,6 +78,11 @@ function moveCamera(){
   camera.position.x = t * -0.0002;
   camera.rotation.y = t * -0.0002;
 
+}
+
+// Function to handle sticky navbar
+
+function stickyNav(){
   if(window.pageYOffset >= sticky){
     navbar.classList.add("sticky");
     console.log("pastnav")
@@ -87,8 +92,14 @@ function moveCamera(){
   }
 }
 
+// Function to accumulate functions that need to occur on scroll
 
-document.body.onscroll = moveCamera;
+function onScrollActions(){
+  moveCamera();
+  stickyNav();
+}
+
+document.body.onscroll = onScrollActions;
 moveCamera()
 
 
