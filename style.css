@@ -592,7 +592,6 @@ blockquotenospaceright:hover{
 /* Experimenting with tooltips */
 .tooltip {
   position: relative;
-  display: inline-block;
   
 }
 
@@ -600,7 +599,10 @@ blockquotenospaceright:hover{
 .tooltip .tooltiptext {
   visibility: hidden;
   padding:10px;
-  background-color: var(--darkBgColorTrans);
+  padding-top:5px;
+  padding-bottom:5px;
+  
+  background-color: var(--darkBgColor);
   color: #fff;
   text-align: center;
   border-radius: 6px;
@@ -610,7 +612,7 @@ blockquotenospaceright:hover{
   z-index: 1;
 
   width: 300px;
-  top: 100%;
+  bottom: 150%;
   left: 50%;
   margin-left: -150px;
   transition: all .5s ease;
@@ -621,6 +623,13 @@ blockquotenospaceright:hover{
 .tooltip:hover .tooltiptext {
   visibility: visible;
   opacity:1;
+}
+
+.tooltip p{
+  color: var(--lightText);
+  font-size: 1.2rem;
+  line-height: .8;
+  text-shadow: 3px 3px 0 var(--blockquoteOutlineColor), 3px -3px 0 var(--blockquoteOutlineColor), -3px 3px 0 var(--blockquoteOutlineColor), -3px -3px 0 var(--blockquoteOutlineColor), 3px 0px 0 var(--blockquoteOutlineColor), 0px 4px 0 var(--blockquoteOutlineColor), -3px 0px 0 var(--blockquoteOutlineColor), 0px -3px 0 var(--blockquoteOutlineColor);
 }
 
 

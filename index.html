@@ -44,16 +44,7 @@
     </blockquoteright>
 
     <blockquote>
-      <h6>Scroll on to learn more about me & the stuff I've coded 👨‍💻
-        <br>
-        Or use this button if you're lazy ➝        <button class="tooltip" onclick="startScroll()">
-          🔽
-          <span class="tooltiptext">
-            <p>note: press the ESC key or refresh to stop auto-scroll</p>
-          </span>
-        </button>
-
-      </h6>
+      <h6>Scroll on to learn more about me & the stuff I've coded 👨‍💻</h6>
     </blockquote>
 
     <blockquoteright>
@@ -63,15 +54,20 @@
     </blockquoteright>
 
 
+    <!-- JAVASCRIPT TO HANDLE SCROLLING FUNCTIONALITY -->
 
     <script>
+      scrolling = false;
+
       function pageScroll() {
         window.scrollBy(0, 1);
         scrolldelay = setTimeout(pageScroll, 20)
+        scrolling = true;
       }
       function doublePageScroll() {
         window.scrollBy(0, 1);
         scrolldelay = setTimeout(doublePageScroll, 5)
+        scrolling = true;
       }
       function startScroll() {
         if (typeof scrolldelay !== 'undefined') {
@@ -79,7 +75,7 @@
         }
         pageScroll();
       }
-      function doubleScroll() {
+      function startDoubleScroll() {
         if (typeof scrolldelay !== 'undefined') {
           clearTimeout(scrolldelay);
         }
@@ -87,13 +83,18 @@
       }
       function stopScroll() {
         clearTimeout(scrolldelay)
+        scrolling = false;
       }
 
       document.addEventListener('keyup', event => {
-        if (event.code === 'Escape' || event.code === 'KeyS' && typeof scrolldelay === 'number') {
-          stopScroll();
-        } else {
+        
+        if (event.code === 'KeyS' && scrolling === false) {
           startScroll();
+        } 
+        else if (event.code === 'KeyX' && scrolling === false){
+          startDoubleScroll();
+        }else {
+          stopScroll();
         }
       })
 
@@ -117,9 +118,11 @@
             <button><li>OTHER PROJECTS</li></button>
             </a>
             <br>
-       
-          <button><li onclick="startScroll()">🔽</li></button>
-          <button><li onclick="doubleScroll()">⏬</li></button>
+
+
+          <button onclick="startScroll()"><li class="tooltip">🔽<span class="tooltiptext">
+            note: press "S" key to toggle scroll</span></li></button>
+          <button><li onclick="startDoubleScroll()">⏬</li></button>
           <button><li onclick="stopScroll()">🛑</li></button>
         </ul>
       </nav>

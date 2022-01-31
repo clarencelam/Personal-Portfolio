@@ -102,9 +102,31 @@ function onScrollActions(){
 document.body.onscroll = onScrollActions;
 moveCamera()
 
+// Function to apply auto-scroll until navbar sticks to top, upon loading the page
 
+function scrollPage(){
+  window.scrollBy(0, 1);
+}
 
+function stopScroll(){
+    clearTimeout(delayScroll)
+}
 
+var scrollflag = false; // var so we only trigger the scroll setTimeout once, when the page loads
+
+function autoScroll(){
+  if(window.pageYOffset >= sticky){
+    scrollflag = true;
+  }
+  else if(window.pageYOffset < sticky && scrollflag === false ){
+    delayScroll = setTimeout(scrollPage, 20)
+    scrollflag = true;
+  } else{
+    stopScroll()
+  }
+}
+
+// Animation loop / gameloop
 function animate(){
   requestAnimationFrame(animate);
 
@@ -115,6 +137,8 @@ function animate(){
   // controls.update();
 
   renderer.render(scene,camera);
+  autoScroll()
+
 }
 animate();
 
