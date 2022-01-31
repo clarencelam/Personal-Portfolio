@@ -79,6 +79,71 @@ function moveCamera(){
   camera.rotation.y = t * -0.0002;
 
 }
+moveCamera()
+
+
+// Function to show hidden items on scroll
+
+/* BAD CODE
+const scrollOffset = 100;
+const scrollElement = document.querySelector(".js-scroll");
+
+scrollElements.forEach((el)=>{
+  el.style.opacity = 0;
+})
+
+const elementInView = (el, offset=0) => {
+  const elementTop = el.getBoundingClientRect().top;
+
+  return (
+    elementTop <= 
+    ((window.innerHeight || document.documentElement.clientHeight) - offset)
+  );
+};
+
+const displayScrollElement = () => {
+  scrollElement.classList.add('scrolled');
+}
+
+const handleScrollAnimation = () => {
+  if (elementInView(scrollElement, scrollOffset)) {
+      displayScrollElement();
+  } 
+}
+*/
+
+const scrollElements = document.querySelectorAll(".js-scroll");
+
+scrollElements.forEach((el) => {
+  el.style.opacity = 0
+})
+
+const elementInView = (el, dividend = 1) => {
+  const elementTop = el.getBoundingClientRect().top;
+
+  return (
+    elementTop <=
+    (window.innerHeight || document.documentElement.clientHeight) / dividend
+  );
+};
+
+const displayScrollElement = (element) => {
+  element.classList.add("scrolled");
+  element.style.opacity = 1;
+};
+
+const handleScrollAnimation = () => {
+  scrollElements.forEach((el) => {
+    if (elementInView(el, 1.25)) {
+      displayScrollElement(el);
+    } 
+  })
+}
+
+window.addEventListener("scroll", () => { 
+  handleScrollAnimation();
+});
+
 
 // Function to handle sticky navbar
 
@@ -92,15 +157,6 @@ function stickyNav(){
   }
 }
 
-// Function to accumulate functions that need to occur on scroll
-
-function onScrollActions(){
-  moveCamera();
-  stickyNav();
-}
-
-document.body.onscroll = onScrollActions;
-moveCamera()
 
 // Function to apply auto-scroll until navbar sticks to top, upon loading the page
 
@@ -116,7 +172,7 @@ var scrollflag = false; // var so we only trigger the scroll setTimeout once, wh
 
 function autoScroll(){
   if(window.pageYOffset >= sticky){
-    scrollflag = true;
+    scrollflag = true; // Stops autoscroll from re-applying after its first ran upon load. So the user can scroll back to top without autoscroll applying.
   }
   else if(window.pageYOffset < sticky && scrollflag === false ){
     delayScroll = setTimeout(scrollPage, 20)
@@ -125,6 +181,18 @@ function autoScroll(){
     stopScroll()
   }
 }
+
+
+
+// Function to accumulate functions that need to occur on scroll
+
+function onScrollActions(){
+  moveCamera();
+  stickyNav();
+}
+
+document.body.onscroll = onScrollActions;
+
 
 // Animation loop / gameloop
 function animate(){
@@ -138,7 +206,6 @@ function animate(){
 
   renderer.render(scene,camera);
   autoScroll()
-
 }
 animate();
 

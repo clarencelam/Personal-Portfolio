@@ -632,13 +632,38 @@ blockquotenospaceright:hover{
   text-shadow: 3px 3px 0 var(--blockquoteOutlineColor), 3px -3px 0 var(--blockquoteOutlineColor), -3px 3px 0 var(--blockquoteOutlineColor), -3px -3px 0 var(--blockquoteOutlineColor), 3px 0px 0 var(--blockquoteOutlineColor), 0px 4px 0 var(--blockquoteOutlineColor), -3px 0px 0 var(--blockquoteOutlineColor), 0px -3px 0 var(--blockquoteOutlineColor);
 }
 
+/* FADE IN FEATURE */
+.js-scroll {
+  transition: all .5s ease;
+}
 
+.js-scroll.scrolled {
+  opacity: 1;
+}
+
+/* Divs for whitespace */
 
 addspace {
   margin: 0;
   grid-column: 2 / span 9;
   line-height: 1;
   text-align: left;
+}
+
+addbigspace{
+  height: 83vh;
+}
+
+addhalfspace{
+  height:40vh;
+}
+
+addquarterspace{
+  height:20vh;
+}
+
+addtenthspace{
+  height:10vh;
 }
 
 
