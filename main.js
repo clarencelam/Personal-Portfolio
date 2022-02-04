@@ -140,6 +140,9 @@ const handleScrollAnimation = () => {
   })
 }
 
+// Code for scroll dissapear feature 
+// to code
+
 window.addEventListener("scroll", () => { 
   handleScrollAnimation();
 });

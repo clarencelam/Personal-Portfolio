@@ -545,7 +545,7 @@ blockquote h4, blockquoteright h4, blockquoterightsmall h4, blockquotenospace h4
 }
 
 
-blockquote p, blockquoteright p, blockquoterightsmall p, blockquotenospace p, blockquotenospaceright p{
+blockquote p, blockquoteright p, blockquoterightsmall p, blockquotenospace p, blockquotenospaceright p, blockquotecenter p{
   color: var(--lightText);
   font-size: 1.5rem;
   line-height: 1;
@@ -587,6 +587,12 @@ blockquotenospaceright {
 
 blockquotenospaceright:hover{
   background-color: black;
+}
+
+blockquotecenter{
+  grid-column: 1 / span 11;
+  text-align: center;
+  align-content: center;
 }
 
 /* Experimenting with tooltips */
@@ -641,6 +647,7 @@ blockquotenospaceright:hover{
   opacity: 1;
 }
 
+
 /* Divs for whitespace */
 
 addspace {
@@ -651,7 +658,7 @@ addspace {
 }
 
 addbigspace{
-  height: 83vh;
+  height: 90vh;
 }
 
 addhalfspace{
