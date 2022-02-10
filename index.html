@@ -19,7 +19,10 @@
   <canvas id="bg"></canvas>
 
   <main>
-    <script type="module" src="src=/main.js"></script>
+    <script type="module" src="src=/main.js">
+    import * as THREE from 'https://cdn.skypack.dev/pin/three@v0.137.5-HJEdoVYPhjkiJWkt6XIa/mode=imports/optimized/three.js';
+    const scene = new THREE.Scene();
+    </script>
     <!-- 
       SCROLL BUTTON
     <div class="column-container">
